@@ -19,7 +19,9 @@ export class CreateTable implements CreateTableUseCase{
     let content = '';
     for (let i = 1; i <= limit; i++) {
       // console.log(`${base} x ${i} = ${base * i}`);
-      content += `${base} x ${i} = ${base * i} \n`;
+      content += `${base} x ${i} = ${base * i}`;
+
+      if (i < limit) content += '\n';
     }
     return content;
   }
